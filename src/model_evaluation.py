@@ -11,7 +11,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MODEL_PATH = PROJECT_ROOT / "models" / "linear_regression_model.joblib"
 
 def calculate_metrics(y_true, y_pred):
-    """Return common regression metrics as a dictionary."""
+    # Return common regression metrics as a dictionary
     mse = mean_squared_error(y_true, y_pred)
     return {
         "MAE": mean_absolute_error(y_true, y_pred),
@@ -22,7 +22,7 @@ def calculate_metrics(y_true, y_pred):
 
 
 def make_prediction_examples(y_true, y_pred, n=10):
-    """Return a readable table of actual prices, predictions, and absolute errors."""
+    # Return a readable table of actual prices, predictions, and absolute errors
     examples = pd.DataFrame(
         {
             "Actual price (USD)": list(y_true),
@@ -41,7 +41,7 @@ def evaluate_saved_model(
     test_size: float = 0.2,
     random_state: int = RANDOM_STATE,
 ):
-    """Evaluate a saved pipeline on the reproducible held-out test split."""
+    # Evaluate a saved pipeline on the reproducible held-out test split
     raw_df = pd.read_csv(data_path)
     df = clean_data(raw_df)
     X, y = split_features_target(df)
