@@ -2,7 +2,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer, OneHotEncoder, StandardScaler
-from feature_engineering import add_features
+from .feature_engineering import add_features
 import pandas as pd
 
 TARGET_COLUMN = "price_usd"

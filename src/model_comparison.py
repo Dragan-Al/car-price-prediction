@@ -7,9 +7,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 
-from data_cleaning import DEFAULT_DATA_PATH, clean_data
-from data_preprocessing import RANDOM_STATE, build_model_pipeline, split_features_target
-from model_evaluation import calculate_metrics
+from .data_cleaning import DEFAULT_DATA_PATH, clean_data
+from .data_preprocessing import RANDOM_STATE, build_model_pipeline, split_features_target
+from .model_evaluation import calculate_metrics
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = PROJECT_ROOT / "models" / "car_price_model.joblib"

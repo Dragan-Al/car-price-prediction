@@ -4,8 +4,12 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
-from data_cleaning import DEFAULT_DATA_PATH, clean_data
-from data_preprocessing import RANDOM_STATE, build_model_pipeline, split_features_target
+from .data_cleaning import DEFAULT_DATA_PATH, clean_data
+from .data_preprocessing import (
+    RANDOM_STATE,
+    build_model_pipeline,
+    split_features_target,
+)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MODEL_PATH = PROJECT_ROOT / "models" / "linear_regression_model.joblib"
